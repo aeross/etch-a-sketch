@@ -1,0 +1,37 @@
+body {
+    background-color: rgb(214, 214, 214)
+}
+
+h1 {
+    text-align: center;
+    margin: 30px auto;
+}
+
+#canvas {
+    background-color: white;
+    border: 2px solid black;
+    margin: 15px auto;
+    width: 500px;
+    height: 500px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid {
+    background-color: cyan;
+
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 10%;  /* set the % value according to grid size (in this case, 10x10) */
+}
+
+.grid.a {
+    background-color: thistle;
+}
+.grid.b {
+    background-color: lightcoral;
+}
+.grid.c {
+    background-color: lightgoldenrodyellow;
+}
