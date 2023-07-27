@@ -19,19 +19,9 @@ h1 {
 }
 
 .grid {
-    background-color: cyan;
+    background-color: white;
 
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 10%;  /* set the % value according to grid size (in this case, 10x10) */
-}
-
-.grid.a {
-    background-color: thistle;
-}
-.grid.b {
-    background-color: lightcoral;
-}
-.grid.c {
-    background-color: lightgoldenrodyellow;
 }
