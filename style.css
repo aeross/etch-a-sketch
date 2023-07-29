@@ -4,7 +4,7 @@ body {
 
 h1 {
     text-align: center;
-    margin: 30px auto;
+    margin: 20px auto;
 }
 
 #canvas {
@@ -24,4 +24,18 @@ h1 {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 10%;  /* set the % value according to grid size (in this case, 10x10) */
+}
+
+#options {
+    margin: 15px auto;
+    width: 500px;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    background-color: white;
+    padding: 6px 14px;
+    border-radius: 10px;
 }
