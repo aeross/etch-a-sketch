@@ -41,9 +41,11 @@ function createGrid() {
 function buttonOnClick() {
     const colorBtn = document.querySelector(".change-color");
     const gridBtn = document.querySelector(".change-grid");
+    const clearBtn = document.querySelector(".clear");
 
     colorBtn.addEventListener("click", changeColor);
     gridBtn.addEventListener("click", changeGrid);
+    clearBtn.addEventListener("click", clearCanvas);
 }
 
 
@@ -70,6 +72,12 @@ function changeGrid() {
     // round `size` to the nearest perfect square
     let sizeSqrt = Math.round(newSize);
     size = sizeSqrt * sizeSqrt;
+    createGrid();
+    draw();
+}
+
+/* Reverts all grid colors back to white. */
+function clearCanvas() {
     createGrid();
     draw();
 }
