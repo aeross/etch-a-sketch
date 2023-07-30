@@ -1,12 +1,20 @@
 let color = "black";  // default to black
-let size = 100;  // default to 10x10
+let size = 900;  // default to 30x30
 
 
 /** Draws on canvas if hovered. */
 function draw() {
     const grid = document.querySelectorAll(".grid");
     grid.forEach(g => {
-        g.addEventListener('mouseover', () => g.style.backgroundColor = color);
+        if (color === "rainbow") {  
+            const MAX = 255;
+            g.addEventListener('mouseover', function() {
+                g.style.backgroundColor = "rgb(" + Math.random() * MAX + ", " + 
+                  Math.random() * MAX + ", " + Math.random() * MAX + ")";
+            });
+        } else {
+            g.addEventListener('mouseover', () => g.style.backgroundColor = color);
+        }
       });
 }
 
@@ -27,7 +35,6 @@ function createGrid() {
         grid.style.flexBasis = (100 / Math.sqrt(size)) + "%";
         canvas.appendChild(grid);
     }
-    console.log(size);
 }
 
 
@@ -41,7 +48,10 @@ function buttonOnClick() {
 
 
 function changeColor() {
-    color = prompt("Insert a new color.");
+    // I actually did american spelling for once lol
+    // istg **randomise**, **colour** looks so much better :/
+    color = prompt("Insert a new color. (input 'rainbow' to randomize color output)");
+    draw();
 }
 
 
